@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,34 +12,212 @@
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./app/scss/style.css">
-
+  <script src="./app/scripts/script.js" defer></script>
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <section class="header">
 
-  Login
-  Register
+    <div class="hide" id="nav__sidemenu">
+        
+      <div class="navbar__burger__slider">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
+      <div class="nav__links__primary">
+        <ul class="nav__links">
+
+          <li class="nav__item  nav__drop">
+
+            <div class="nav__link" id="drop__link__1">
+              Features
+              <img src="./images/icon-arrow-up.svg" id="img__link__1">
+            </div>
+
+            <div class="dropdown hide flex flex__dir__c">
+              <a href="#" class="dropdown__item">
+                <img src="./images/icon-todo.svg">
+                Todo List
+              </a>
+              <a href="#" class="dropdown__item">
+                <img src="./images/icon-calendar.svg">
+                Calendar
+              </a>
+              <a href="#" class="dropdown__item">
+                <img src="./images/icon-reminders.svg">
+                Reminders
+              </a>
+              <a href="#" class="dropdown__item">
+                <img src="./images/icon-planning.svg">
+                Planning
+              </a>
+            </div>
+
+          </li>
+
+          <li class="nav__item nav__drop">
+
+            <div class="nav__link" id="drop__link__2">
+              Company
+              <img src="./images/icon-arrow-up.svg" id="img__link__2">
+            </div>
+
+            <div class="dropdown hide dropdown__comp flex flex__dir__c">
+              <a href="#" class="dropdown__item">History</a>
+              <a href="#" class="dropdown__item">Our Team</a>
+              <a href="#" class="dropdown__item">Blog</a>
+            </div>
+
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Careers</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">About</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="nav__links__secondary">
+        <ul class="nav__links">
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Login</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link" id="register">Register</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div id="overlay" class="hide"></div>
+
+    <nav class="navbar flex flex__ai__c flex__jc__sb">
+
+      <a href="/" class="navbar__logo flex hide__for__desktop">
+        <img src="./images/logo.svg">
+      </a>
+
+      <div class="navbar__logo__with__links hide__for__mobile">
+
+        <a href="/" class="navbar__logo flex hide__for__mobile">
+          <img src="./images/logo.svg">
+        </a>
+
+        <div class="nav__links__primary hide__for__mobile">
+          <ul class="nav__links">
+
+            <li class="nav__item  nav__drop">
+
+              <div class="nav__link" id="drop__link__1">
+                Features
+                <img src="./images/icon-arrow-up.svg" id="img__link__1">
+              </div>
+
+              <div class="dropdown hide flex flex__dir__c">
+                <a href="#" class="dropdown__item">
+                  <img src="./images/icon-todo.svg">
+                  Todo List
+                </a>
+                <a href="#" class="dropdown__item">
+                  <img src="./images/icon-calendar.svg">
+                  Calendar
+                </a>
+                <a href="#" class="dropdown__item">
+                  <img src="./images/icon-reminders.svg">
+                  Reminders
+                </a>
+                <a href="#" class="dropdown__item">
+                  <img src="./images/icon-planning.svg">
+                  Planning
+                </a>
+              </div>
+
+            </li>
+
+            <li class="nav__item nav__drop">
+
+              <div class="nav__link" id="drop__link__2">
+                Company
+                <img src="./images/icon-arrow-up.svg" id="img__link__2">
+              </div>
+
+              <div class="dropdown hide dropdown__comp flex flex__dir__c">
+                <a href="#" class="dropdown__item">History</a>
+                <a href="#" class="dropdown__item">Our Team</a>
+                <a href="#" class="dropdown__item">Blog</a>
+              </div>
+
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">Careers</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav__links__secondary hide__for__mobile">
+        <ul class="nav__links">
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Login</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link" id="register">Register</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="navbar__burger" id="nav__burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    </nav>
+
+  </section>
 
   Make remote work
 
-  Get your team in sync, no matter your location. Streamline processes, 
+  Get your team in sync, no matter your location. Streamline processes,
   create team rituals, and watch productivity soar.
 
   Learn more
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>

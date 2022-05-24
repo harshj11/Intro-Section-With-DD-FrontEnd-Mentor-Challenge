@@ -7,8 +7,68 @@ html {
 }
 
 body {
+    background-color: $white;
     font-family: 'Epilogue', sans-serif;
 
     margin: 0;
     padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+li {
+    cursor: pointer;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+
+    &__dir__c {
+        flex-direction: column;
+    }
+
+    &__dir__r {
+        flex-direction: row;
+    }
+
+    &__jc__c {
+        justify-content: center;
+    }
+
+    &__jc__sb {
+        justify-content: space-between;
+    }
+
+    &__jc__sa {
+        justify-content: space-around;
+    }
+
+    &__ai__c {
+        align-items: center;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@include breakpoint-down(small) {
+    .hide__for__mobile {
+        display: none;
+    }
+}
+
+@include breakpoint-up(medium) {
+    .hide__for__desktop {
+        display: none;
+    }
 }
